@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { setUser } from "../../components/userSlice/userSlice";
 import { Container, Button, Alert } from "@mui/material";
 
@@ -55,6 +55,7 @@ const Login = () => {
             <Button variant="contained" color="primary" onClick={handleLogin}>
                 Kirish
             </Button>
+            <Link to={"/register"}>register</Link>
         </Container>
     );
 };
